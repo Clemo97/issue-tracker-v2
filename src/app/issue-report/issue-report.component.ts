@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -9,9 +9,18 @@ import { FormBuilder } from '@angular/forms';
 })
 export class IssueReportComponent {
 
+  issueForm: FormGroup | undefined;
+
+
   constructor(private builder: FormBuilder) {}
 
   ngOnInit(): void {
+    this.issueForm = this.builder.group({
+      title: [''],
+      description: [''],
+      priority: [''],
+      type: ['']
+    });
   }
 
 }
