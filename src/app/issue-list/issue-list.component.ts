@@ -3,6 +3,7 @@ import { IssuesService } from '../issues.service';
 import { Issue } from '../issue';
 
 
+
 @Component({
   selector: 'app-issue-list',
   templateUrl: './issue-list.component.html',
